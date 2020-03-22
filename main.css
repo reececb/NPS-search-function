@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+  }
+  html {
+    font-family: 'Noto Serif TC', serif;
+  }
+  h1 {
+    background-color: rgb(6, 0, 41);
+    padding: 15px;
+    border-bottom: 5px solid grey;
+    color: white;
+    font-weight: 100;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #js-search-term, #js-max-results {
+    margin-top: 20px;
+    width: 400px;
+    height: 40px;
+    font-size: 20px; 
+  }
+  label, #submit-button {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  label {
+    margin-left: 30px;
+  }
+  
+  #submit-button {
+    width: 100px;
+  }
