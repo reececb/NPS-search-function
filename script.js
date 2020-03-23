@@ -20,9 +20,10 @@ const searchURL = 'https://developer.nps.gov/api/v1/parks';
     }
 };
 
-function getNews(query, maxResults = 10) {
+function getNews(query, maxResults = 10, state) {
   const params = {
     q: query,
+    stateCode: state,
     limit: maxResults,
     api_key: apiKey
   };
@@ -49,9 +50,11 @@ function getNews(query, maxResults = 10) {
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
+    $('#js-error-message').hide();
     const searchTerm = $('#js-search-term').val();
     const maxResults = $('#js-max-results').val();
-    getNews(searchTerm, maxResults);
+    const searchState = $('#js-state').val();
+    getNews(searchTerm, maxResults, searchState);
   });
 }
 
